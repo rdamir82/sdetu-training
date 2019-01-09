@@ -14,15 +14,16 @@ public class UniversityApp {
 		st1.showCourses();
 		System.out.println(st1.toString());
 		st1.pay(1000);
+		System.out.println(st1.getEmail());
 
 	}
 }
 
 /*
- * New Student constructor that takes name and SSN in the arguments
+ * New Student constructor that takes name and ssn in the arguments
  * Automatically create an email ID based on the name Set a private static ID
  * Generate a user ID that is combination of Static ID, random 4-digit number
- * between 1000 and 9000, and last 4 of SSN Methods: enroll(), pay(),
+ * between 1000 and 9000, and last 4 of ssn Methods: enroll(), pay(),
  * checkBalance(), toString(), showCourses() Use encapsulation to set variables
  * (phone, city, state)
  */
@@ -33,31 +34,35 @@ class Student {
 	private String phone;
 	private String city;
 	private String state;
-	private String sSN;
+	private String ssn;
 	private double balance;
 	private String courses = "";
+	private String email;
+
+	
 
 	public Student(String name, String ssn) {
 		iD++;
 		this.name = name;
-		this.sSN = ssn;
+		this.setSsn(ssn);
+		this.email = createEmail(name);
 
 		System.out.println("New Student added:");
 		System.out.println("NAME: " + name);
-		System.out.println("EMAIL: " + createEmail(name));
-		System.out.println("STUDENT ID: " + userID(name, sSN));
+		System.out.println("EMAIL: " + email);
+		System.out.println("STUDENT ID: " + userID(name, ssn));
 	}
 
-	// create uniqu email
+	// create unique email
 	public String createEmail(String name) {
 		return ((name.replaceAll("\\s+", "")).toLowerCase() + iD + "@university.com");
 	}
 
 	// Generate user ID
-	public String userID(String name, String sSN) {
+	public String userID(String name, String ssn) {
 		int random = (int) (Math.random() * (9000 - 1000)) + 1000;
-		String last4Ssn = sSN.substring(sSN.length() - 4, sSN.length());
-		String userID = iD + "" + random + last4Ssn;
+		String last4ssn = ssn.substring(ssn.length() - 4, ssn.length());
+		String userID = iD + "" + random + last4ssn;
 		return userID;
 	}
 
@@ -110,6 +115,22 @@ class Student {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSsn() {
+		return ssn;
+	}
+
+	public void setSsn(String ssn) {
+		this.ssn = ssn;
 	}
 
 }
