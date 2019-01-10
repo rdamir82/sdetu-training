@@ -15,6 +15,7 @@ public class CommonExceptions {
 		System.out.println("CANNOT DIVIDE BY ZERO");
 		System.out.println(e.toString());
 	}
+	
 	System.out.println("Program is closing");
 	
 	String[] states = {"CA", "TX", "FL", "NY"};
