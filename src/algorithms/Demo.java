@@ -18,6 +18,7 @@ public class Demo {
 		// Call the bubble sort function
 		
 		Sort.bubbleSort(numbers);
+		
 	}
 
 }
