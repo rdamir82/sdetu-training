@@ -18,10 +18,13 @@ public class Main {
 		
 		// Player variables
 		int health = 100;
+		int maxHealth = 100;
 		int attackDamage = 50;
 		int numHealthPotions = 3;
 		int healthPotionHealAmount = 30;
 		int healthPotionDropChance = 60; // precentage
+		int xp = 0;
+		int lvl = 1;
 		
 		boolean running = true;
 		
@@ -32,6 +35,7 @@ public class Main {
 			System.out.println("-----------------------------------------------");
 			
 			int enemyHealth = rand.nextInt(maxEnemyHealth);
+			int xpToGain = enemyHealth;
 			String enemy = enemies[rand.nextInt(enemies.length)];
 			
 			System.out.println("\t # " + enemy + " appeared! #\n");
@@ -66,6 +70,9 @@ public class Main {
 					
 					if(numHealthPotions > 0) {
 						health += healthPotionHealAmount;
+						if(health > maxHealth) {
+							health = maxHealth;
+						}
 						numHealthPotions --;
 						System.out.println("\t> You drink a health potion, healing yourself for " + healthPotionHealAmount + "."
 											+ "\n\t> You now have " + health + " MP."
@@ -83,11 +90,11 @@ public class Main {
 					if(rand.nextInt(100) < 30) {
 						int enemyAttackWhenRun = rand.nextInt(enemyAttackDamage);
 						health -= enemyAttackWhenRun;
-						System.out.println("\tBut " + enemy + " deal " + enemyAttackWhenRun + " damage to you!");
+						System.out.println("\t>But " + enemy + " deal " + enemyAttackWhenRun + " damage to you!");
 						if(health < 1) {
 							break;
 						}
-						System.out.println("\t Your HP is: " + health);
+						System.out.println("\t>Your HP is: " + health);
 						
 					}
 					
@@ -106,6 +113,29 @@ public class Main {
 			killCount ++;
 			System.out.println("-----------------------------------------------");
 			System.out.println(" # " + enemy + " was defeated! # ");
+			System.out.println(" # You gain " + xpToGain + " XP points!" );
+			xp += xpToGain;
+			System.out.println(" # You have " + xp + " XP points.");
+			if (xp > 500 && lvl == 1) {
+				lvl ++;
+				maxHealth += 10;
+				attackDamage +=10;
+				System.out.println(" # You are promotoed! ATT: " + attackDamage + " Max health: " + maxHealth);
+			}
+			if (xp > 1000 && lvl == 2) {
+				lvl ++;
+				maxHealth += 10;
+				attackDamage +=10;
+				System.out.println(" # You are promotoed! ATT: " + attackDamage + " Max health: " + maxHealth);
+			}
+			if (xp > 2000 && lvl == 3) {
+				lvl ++;
+				maxHealth += 10;
+				attackDamage +=10;
+				System.out.println(" # You are promotoed! ATT: " + attackDamage + " Max health: " + maxHealth);
+			}
+			
+			
 			killCountMsg(killCount);
 			//levelUp(killCount);
 			System.out.println(" # You have " + health + " HP left. #");
@@ -145,7 +175,7 @@ public class Main {
 	
 	
 public static void killCountMsg(int killCount) {
-	System.out.println("\t # You defeat " + killCount + " creature(s)!");
+	System.out.println(" # You defeat " + killCount + " creature(s)!");
 	}
 
 public static void theEndMsg() {
