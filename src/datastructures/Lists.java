@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class Lists {
 
 	public static void main(String[] args) {
-		// 1. create a colection
+		// 1. create a collection
 		ArrayList<String> cities = new ArrayList<String>();
 		
 		// 2. Add some elements
 		
-		cities.add("Cliveland");
+		cities.add("Cleveland");
 		cities.add("Toronto");
 		cities.add("Chicago");
 		cities.add("Miami");
