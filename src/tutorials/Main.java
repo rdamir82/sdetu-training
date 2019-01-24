@@ -74,9 +74,18 @@ public class Main {
 							health = maxHealth;
 						}
 						numHealthPotions --;
+						String potionS = "";
+						if(numHealthPotions < 2) {
+							potionS = " health potion left.\n";
+						} 
+						else {
+							potionS = " health potions left.\n";
+						}
 						System.out.println("\t> You drink a health potion, healing yourself for " + healthPotionHealAmount + "."
 											+ "\n\t> You now have " + health + " MP."
-											+ "\n\t> You have " + numHealthPotions + " health potions left.\n");
+											+ "\n\t> You have " + numHealthPotions + potionS);
+												
+						
 						
 					}
 					else {
@@ -142,7 +151,18 @@ public class Main {
 			if(rand.nextInt(100) < healthPotionDropChance) {
 				numHealthPotions++;
 				System.out.println(" # The " + enemy + " dropped a health potion! # ");
-				System.out.println(" # You now have " + numHealthPotions + " health potion(s). # ");
+				String potionS2 = "";
+				
+				if(numHealthPotions < 2) {
+					potionS2 = " health potion. # ";
+				} 
+				else {
+					potionS2 =" health potions. # ";
+				}
+								
+				System.out.println(" # You now have " + numHealthPotions + potionS2);
+				
+				
 			} 
 			System.out.println("-----------------------------------------------");
 			System.out.println("What would you like to do now?");
@@ -175,7 +195,15 @@ public class Main {
 	
 	
 public static void killCountMsg(int killCount) {
-	System.out.println(" # You defeat " + killCount + " creature(s)!");
+	String creatureS = "";
+	if(killCount < 2) {
+		creatureS =" creature";
+	} 
+	else {
+		creatureS =" creatures!";
+	}
+	System.out.println(" # You defeat " + killCount + creatureS);
+
 	}
 
 public static void theEndMsg() {
