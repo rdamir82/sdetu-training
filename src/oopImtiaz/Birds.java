@@ -1,34 +1,26 @@
 package oopImtiaz;
 
-public class Birds {
+public class Birds extends Animals {
 	
-	String spicies;
-	public Birds(String spicies, String name, String color, String food, String origin, int age, int weight, int wingSpawnCm) {
-		super();
-		this.spicies = spicies;
-		this.name = name;
-		this.color = color;
-		this.food = food;
-		this.origin = origin;
-		this.age = age;
-		this.weight = weight;
-		this.wingSpawnCm = wingSpawnCm;
-	}
-	String name;
 	String color;
-	String food;
-	String origin;
-	
-	int age;
-	int weight;
 	int wingSpawnCm;
 	
+	public Birds(String spicies, String name, int age, String origin, int weigthKg, String food, int wingSpawnCm, String color) {
+		super(spicies, name, age, origin, weigthKg, food);
+		this.wingSpawnCm = wingSpawnCm;
+		this.color = color;
+	}
+	
+
+	
+
+
 	public void info() {
 		System.out.println("Spicies: " + spicies + "\n" + 
 				   "Name: " + name + "\n" + 
 				   "Age: " + age + " year\n" + 
 				   "Color: " + color + "\n" + 
-				   "Weigth: " + weight + " kg\n" + 
+				   "Weigth: " + weigthKg + " kg\n" + 
 				   "Wing Spawn: " + wingSpawnCm + " cm\n" + 
 				   "Origin: " + origin + "\n" +
 				   "Eating: " + food + "\n" + "-----------------------");

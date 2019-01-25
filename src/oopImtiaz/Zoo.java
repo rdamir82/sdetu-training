@@ -16,16 +16,20 @@ public class Zoo {
 		Animals lion = new Animals( "Lion" , "Leo" , 6 , "Africa", 325, "Meat"  );
 		Animals lion2 = new Animals ("Lion", "Lea", 3 , "Africa", 234, "Meat");
 		
-		Birds eagle = new Birds( "Eagle", "Strongy", "Brown", "Meat", "USA", 3, 24, 245 );
-		Birds sparow = new Birds ("Sparrow", "Jack", "Brown", "Seeds", "Europe", 2, 1, 12);
+		Birds eagle = new Birds( "Eagle", "Strongy", 5 , "USA", 3, "meat", 245, "brown" );
+		Birds sparow = new Birds ("Sparrow", "Jack", 2, "Europe", 1, "seeds", 12, "yellow");
 		
-		Fish golden = new Fish("Golden", "Goldy", "Yellow", "Australia", 1, 1);
-		Fish piranha = new Fish("piranha", "Notty", "green", "Brasil", 2, 1);
+		Birds pigenon = new Birds("Pigenon", "Teslas", 5, "North-America", 1, "seeds", 25, "silver");
+		
+		Fish golden = new Fish("Golden", "Goldy", 1 , "Australia", 1, "algas", "Yellow");
+		Fish piranha = new Fish("piranha", "Notty", 2, "Brasil", 2, "Meat", "silver");
+		Fish shark = new Fish("Shark", "Sharky", 10, "Caribbean", 120, "Meat", "silver");
 		
 		Character player = new Character("Herro", 100, 30, 20, 0);
 		Character foe = new Character("Skeleton", 30, 10, 10, 0);
 		
 		Animal frog = new Animal(2, "male", 2);
+		Bird bird1 = new Bird(2, "Male", 2, 15);
 		
 		
 		zebra.about();
@@ -42,6 +46,12 @@ public class Zoo {
 		elephant2.about();
 		player.info();
 		foe.info();
+		frog.eat();
+		pigenon.about();
+		pigenon.info();
+		shark.about();
+		shark.info();
+		bird1.fly();
 		frog.eat();
 	}
 

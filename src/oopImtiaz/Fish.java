@@ -1,30 +1,24 @@
 package oopImtiaz;
 
-public class Fish {
+public class Fish extends Animals {
 	
-	String spicies;
-	public Fish(String spicies, String name, String color, String origin, int age, int weight) {
-		super();
-		this.spicies = spicies;
-		this.name = name;
-		this.color = color;
-		this.origin = origin;
-		this.age = age;
-		this.weight = weight;
-	}
-	String name;
+
 	String color;
-	String origin;
 	
-	int age;
-	int weight;
+
 	
+	
+	public Fish(String spicies, String name, int age, String origin, int weigthKg, String food, String color) {
+		super(spicies, name, age, origin, weigthKg, food);
+		this.color = color;
+	}
+
 	public void info() {
 		System.out.println("Spicies: " + spicies + "\n" + 
 				   "Name: " + name + "\n" + 
 				   "Age: " + age + " year\n" + 
 				   "Color: " + color + "\n" + 
-				   "Weigth: " + weight + " kg\n" + 
+				   "Weigth: " + weigthKg + " kg\n" + 
 				   "Origin: " + origin + "\n" + "-----------------------");
 	}
 	
