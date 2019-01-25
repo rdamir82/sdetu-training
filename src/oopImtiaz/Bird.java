@@ -10,7 +10,11 @@ public class Bird extends Animal{
 		
 	}
 
-	public void fly() {
-		System.out.println("Flying..");
+	@Override
+	public void move() {
+		System.out.println("Flapping wings.. ");
+		
 	}
+
+
 }

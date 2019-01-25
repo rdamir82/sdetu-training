@@ -28,8 +28,12 @@ public class Zoo {
 		Character player = new Character("Herro", 100, 30, 20, 0);
 		Character foe = new Character("Skeleton", 30, 10, 10, 0);
 		
-		Animal frog = new Animal(2, "male", 2);
+		//Animal frog = new Animal(2, "male", 2);
 		Bird bird1 = new Bird(2, "Male", 2, 15);
+		
+		Chicken chick1 = new Chicken(2, "female", 3, 25);
+		Sparrow sparrow1 = new Sparrow(5, "male", 1, 25);
+		Fish2 fish1 = new Fish2( 2,"F", 10);
 		
 		
 		zebra.about();
@@ -46,13 +50,20 @@ public class Zoo {
 		elephant2.about();
 		player.info();
 		foe.info();
-		frog.eat();
+//		frog.eat();
 		pigenon.about();
 		pigenon.info();
 		shark.about();
 		shark.info();
-		bird1.fly();
-		frog.eat();
+//		bird1.fly();
+//		frog.eat();
+//		chick1.fly();
+		sparrow1.move();
+		fish1.move();
+	}
+	
+	public static void moveAnimals(Animal animal) {
+		animal.move();
 	}
 
 }
