@@ -7,11 +7,7 @@ public class Dealership {
 		
 		Account dealerShipAcc = new Account(0);
 		
-		Customer cust1 = new Customer(null, null);
-		
-		cust1.name = "Tom";
-		cust1.addres = "123 Anything St. ";
-		cust1.cashOnHand = 12000;
+		Customer cust1 = new Customer("Tom", "123 Anything St.", 12000);
 		
 		Vehicle car1 = new Vehicle("Honda SXC", 7000.00, "Diesel", "Yellow", 2005);
 		Vehicle car2 = new Vehicle("NISSAN Skyline RB25", 8000.00, "Petrol", "Silver", 1998);
@@ -48,7 +44,7 @@ public class Dealership {
 		car2.info();
 		car3.info();
 		car4.info();
-		car5.info();;
+		car5.info();
 		
 		
 	}

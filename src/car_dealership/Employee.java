@@ -2,7 +2,7 @@ package car_dealership;
 
 public class Employee extends Person{
 		
-	int sellCount;
+	private int sellCount;
 	private double balance = 0;
 	
 	public Employee(String name, String addres, int sellCount, double balance) {
@@ -14,8 +14,8 @@ public class Employee extends Person{
 
 	public void info() {
 		System.out.println("------------------");
-		System.out.println("Employee: " + name);
-		System.out.println("Address: " + addres);
+		System.out.println("Employee: " + getName());
+		System.out.println("Address: " + getAddres());
 		System.out.println("Sell: " + sellCount + " car");
 		System.out.println("Balance: $" + getBalance());
 
@@ -29,6 +29,14 @@ public class Employee extends Person{
 
 	public void setBalance(double balance) {
 		this.balance = balance;
+	}
+	
+	public static void addOneToSellcount(Employee emp) {
+		emp.sellCount++;
+	}
+	
+	public static void addToBalance(Employee emp, double amount, double precentForDealer) {
+		emp.setBalance(emp.getBalance() + precentForDealer);
 	}
 
 }
