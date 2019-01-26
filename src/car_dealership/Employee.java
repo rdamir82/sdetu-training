@@ -25,18 +25,13 @@ public class Employee extends Person{
 	public double getBalance() {
 		return balance;
 	}
-
-
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
 	
 	public static void addOneToSellcount(Employee emp) {
 		emp.sellCount++;
 	}
 	
-	public static void addToBalance(Employee emp, double amount, double precentForDealer) {
-		emp.setBalance(emp.getBalance() + precentForDealer);
+	public void deposit(double amount) {
+		balance += amount;
 	}
 
 }

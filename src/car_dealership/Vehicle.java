@@ -11,22 +11,24 @@ public class Vehicle {
 	
 	public Vehicle(String model, double price, String engineType, String color, int productionYear) {
 		super();
-		this.setModel(model);
+		this.model = model;
 		this.setPrice(price);
 		this.engineType = engineType;
 		this.color = color;
-		this.setProductionYear(productionYear);
+		this.productionYear = productionYear;
 	}
 	
 public void info() {
 		
 		System.out.println("---------------------");
 		System.out.println("Model: " + getModel());
-		System.out.println("engine type: " + engineType);
 		System.out.println("price: $" + getPrice());
+	/*	
+		System.out.println("engine type: " + engineType);
 		System.out.println("color:  " + color);
 		System.out.println("Year: " + getProductionYear());
-		if (getInStock() == 0) {
+	*/
+		if (isInStock() == 0) {
 			System.out.println("OUT OF STOCK!!!");
 		} else {
 			System.out.println("IN STOCK");
@@ -34,10 +36,10 @@ public void info() {
 	}
 
 public static void removeVehicle(Vehicle vehicle ) {
-	vehicle.setInStock(vehicle.getInStock() - 1);
+	vehicle.setInStock(vehicle.isInStock() - 1);
 }
 
-public int getInStock() {
+public int isInStock() {
 	return inStock;
 }
 
@@ -57,16 +59,10 @@ public String getModel() {
 	return model;
 }
 
-public void setModel(String model) {
-	this.model = model;
-}
 
 public int getProductionYear() {
 	return productionYear;
 }
 
-public void setProductionYear(int productionYear) {
-	this.productionYear = productionYear;
-}
 
 }
