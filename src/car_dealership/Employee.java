@@ -5,6 +5,7 @@ public class Employee {
 	String name;
 	String addres;
 	int sellCount;
+	private double balance = 0;
 	
 	
 	public Employee(String name, String addres, int sellCount) {
@@ -20,7 +21,18 @@ public class Employee {
 		System.out.println("Employee: " + name);
 		System.out.println("Address: " + addres);
 		System.out.println("Sell: " + sellCount + " car");
+		System.out.println("Balance: $" + getBalance());
 
+	}
+
+
+	public double getBalance() {
+		return balance;
+	}
+
+
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 
 }

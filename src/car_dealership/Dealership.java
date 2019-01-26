@@ -32,14 +32,25 @@ public class Dealership {
 		cust1.info();
 		cust1.purchaseCar(car1, emp1, true, dealerShipAcc);
 		cust1.info();
-		cust1.purchaseCar(car2, emp1, true, dealerShipAcc);
 		emp1.info();
+		dealerShipAcc.info();
+
+		cust1.purchaseCar(car3, emp1, true, dealerShipAcc);
+		cust1.info();
+		emp1.info();
+		dealerShipAcc.info();
+		
+		cust1.purchaseCar(car1, emp1, true, dealerShipAcc);
+		
+		cust1.purchaseCar(car5, emp1, true, dealerShipAcc);
 		
 		car1.info();
 		car2.info();
+		car3.info();
+		car4.info();
+		car5.info();;
 		
-		dealerShipAcc.info();
-
+		
 	}
 
 }

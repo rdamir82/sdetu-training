@@ -9,14 +9,20 @@ public class Customer {
 	
 	public void purchaseCar(Vehicle vehicle, Employee emp, boolean finance, Account dealerShipAcc) {
 		System.out.println("------------------");
-		if (cashOnHand >= vehicle.price) {
+		
+		if (vehicle.inStock == 0) {
+			System.out.println("Sorry, " + vehicle.model + " is out of stock.");
+		} 
+		else if (cashOnHand >= vehicle.price) {
 		System.out.println("Customer " + name + " buy the Vehicle " + vehicle.model + " " + vehicle.productionYear + " for $" + vehicle.price + " from " + emp.name);
 		cashOnHand -= vehicle.price;
 		vehicle.inStock--;
 		emp.sellCount++;
-		dealerShipAcc.balance += vehicle.price; 
+		double precentForDealer = vehicle.price * 0.05;
+		dealerShipAcc.setBalance(dealerShipAcc.getBalance() + (vehicle.price - precentForDealer));
+		emp.setBalance(emp.getBalance() + precentForDealer);
 		}
-		else {
+		 else {
 			System.out.println("Customer " + name + " try to buy the Vehicle " + vehicle.model + " " + vehicle.productionYear + " for " + vehicle.price + " from " + emp.name + " but need him $" + (vehicle.price - cashOnHand));
 		}
 				
