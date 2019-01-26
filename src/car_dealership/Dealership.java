@@ -7,10 +7,10 @@ public class Dealership {
 		
 		Account dealerShipAcc = new Account(0);
 		
-		Customer cust1 = new Customer();
+		Customer cust1 = new Customer(null, null);
 		
 		cust1.name = "Tom";
-		cust1.address = "123 Anything St. ";
+		cust1.addres = "123 Anything St. ";
 		cust1.cashOnHand = 12000;
 		
 		Vehicle car1 = new Vehicle("Honda SXC", 7000.00, "Diesel", "Yellow", 2005);
@@ -19,7 +19,7 @@ public class Dealership {
 		Vehicle car4 = new Vehicle("Ford", 7000.00, "Diesel", "Red", 2005);
 		Vehicle car5 = new Vehicle("Mercedes", 14000.00, "Diesel", "Silver", 2010);
 		
-		Employee emp1 = new Employee("Adel","JNA 40", 0);
+		Employee emp1 = new Employee("Adel","JNA 40", 0, 0);
 		dealerShipAcc.info();
 		
 		car1.info();

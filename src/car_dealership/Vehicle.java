@@ -8,7 +8,6 @@ public class Vehicle {
 	String color;
 	int productionYear;
 	int inStock = 1;
-	//int seats;
 	
 	public Vehicle(String model, double price, String engineType, String color, int productionYear) {
 		super();

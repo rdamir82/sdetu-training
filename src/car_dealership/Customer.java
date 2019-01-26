@@ -1,11 +1,16 @@
 package car_dealership;
 
-public class Customer {
+
+public class Customer extends Person {
 	
-	String name;
-	String address;
 	double cashOnHand;
 	
+	public Customer(String name, String addres) {
+		super(name, addres);
+	}
+	
+
+
 	
 	public void purchaseCar(Vehicle vehicle, Employee emp, boolean finance, Account dealerShipAcc) {
 		System.out.println("------------------");
@@ -32,7 +37,7 @@ public class Customer {
 		
 		System.out.println("---------------------");
 		System.out.println("Customer: " + name);
-		System.out.println("Address: " + address);
+		System.out.println("Address: " + addres);
 		System.out.println("Cash:  $" + cashOnHand);
 	}
 }
