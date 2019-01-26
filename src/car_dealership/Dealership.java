@@ -15,15 +15,19 @@ public class Dealership {
 		
 		Vehicle car1 = new Vehicle("Honda SXC", 7000.00, "Diesel", "Yellow", 2005);
 		Vehicle car2 = new Vehicle("NISSAN Skyline RB25", 8000.00, "Petrol", "Silver", 1998);
-		Vehicle car3 = new Vehicle("Honda SXC", 7000.00, "Diesel", "Yellow", 2005);
-		Vehicle car4 = new Vehicle("Honda SXC", 7000.00, "Diesel", "Yellow", 2005);
-		Vehicle car5 = new Vehicle("Honda SXC", 7000.00, "Diesel", "Yellow", 2005);
+		Vehicle car3 = new Vehicle("MAZDA", 5000.00, "Diesel", "Yellow", 1989);
+		Vehicle car4 = new Vehicle("Ford", 7000.00, "Diesel", "Red", 2005);
+		Vehicle car5 = new Vehicle("Mercedes", 14000.00, "Diesel", "Silver", 2010);
 		
 		Employee emp1 = new Employee("Adel","JNA 40", 0);
 		dealerShipAcc.info();
 		
 		car1.info();
 		car2.info();
+		car3.info();
+		car4.info();
+		car5.info();
+
 		
 		cust1.info();
 		cust1.purchaseCar(car1, emp1, true, dealerShipAcc);
