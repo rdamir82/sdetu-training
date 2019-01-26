@@ -58,11 +58,21 @@ public class Zoo {
 //		bird1.fly();
 //		frog.eat();
 //		chick1.fly();
-		sparrow1.move();
-		fish1.move();
+		//sparrow1.move();
+		//fish1.move();
+		
+		moveAnimal(fish1);
+		moveAnimal(sparrow1);
+		
+		IFlayable flayingBird = new Sparrow(2, "F", 1, 15);
+		//IFlayable flyingBird2 = new Bird(1, "M", 1, 17);
+		
+		flayingBird.fly();
+		
+		
 	}
 	
-	public static void moveAnimals(Animal animal) {
+	public static void moveAnimal(Animal animal) {
 		animal.move();
 	}
 
