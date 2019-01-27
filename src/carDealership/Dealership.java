@@ -9,17 +9,15 @@ public class Dealership {
 		cust1.setAddress("123 Anything St.");
 		cust1.setCashOnHand(12000);
 		
-		Vehicle vehicle= new Vehicle("Ford", "T-Model", 6000);
+		Vehicle vehicle = new Vehicle("Ford", "T-Model", 16000);
 		
 		Employee emp = new Employee();
 		
 		
 		
 		cust1.purchaseCar(vehicle, emp, false);
+				
 		
-		
-		
-
 	}
 
 }

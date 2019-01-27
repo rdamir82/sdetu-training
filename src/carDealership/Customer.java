@@ -4,6 +4,15 @@ public class Customer {
 	
 	private String name;
 	private String address;
+	
+	public Customer(String name, String address, double cashOnHand) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.cashOnHand = cashOnHand;
+	}
+
+
 	private double cashOnHand;
 	
 	

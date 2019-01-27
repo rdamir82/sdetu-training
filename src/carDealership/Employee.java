@@ -9,7 +9,7 @@ public class Employee {
 			// customer pay in cash
 			processTransaction(cust, vehicle);
 		} else {
-			System.out.println(" Customer will need more money to purchase vehicle " + vehicle );
+			System.out.println(" Customer will need more money to purchase vehicle " + vehicle.getMake() + " " + vehicle.getModel() );
 		}
 	}
 	
@@ -19,7 +19,7 @@ public class Employee {
 	}
 	
 	public void processTransaction(Customer cust, Vehicle vehicle) {
-		System.out.println("Customer has purchased the vehicle " + vehicle 
+		System.out.println("Customer has purchased the vehicle " + vehicle.getMake() + " " +vehicle.getModel() 
 				+ " for the price $" + vehicle.getPrice());
 	}
 }
