@@ -1,11 +1,11 @@
 package car_dealership;
 
-public class Dealership {
+public class Dealership extends Person {
 
 	public static void main(String[] args) {
 		
 		
-		Dealership dealership = new Dealership( 0, 5);
+		Dealership dealership = new Dealership( "The Dealership" , "Address", 0, 5);
 		
 		Customer cust1 = new Customer("Tom", "123 Anything St.", 40000);
 		
@@ -51,21 +51,20 @@ public class Dealership {
 		
 	}
 	
-	private double dealershipsBalance = 0;
+	//private double dealershipsBalance = 0;
 	private double precentForSeller = 5;
 	
 	
 	
-	public Dealership(double dealershipsBalance, double precentForSeller) {
-		super();
-		this.dealershipsBalance = dealershipsBalance;
+	public Dealership(String name, String addres, double balance, double precentForSeller) {
+		super(name, addres, balance);
 		this.precentForSeller = precentForSeller;
 	}
 
 	public static void purchaseCar(Customer cust, Vehicle car, Employee emp, Dealership dealership ) {
 		System.out.println("---------------------");
 		if(car.isInStock()!= 0) {
-		if(cust.getCashOnHand() > car.getPrice()) {	
+		if(cust.getBalance() > car.getPrice()) {	
 		System.out.println( cust.getName() + " buy a " + car.getModel()  + " car for $" + car.getPrice() + " from " + emp.getName());
 		
 		double forSeller = car.getPrice() * dealership.precentForSeller/100;
@@ -79,7 +78,7 @@ public class Dealership {
 		} else {
 			System.out.println("Customer " + cust.getName() + " try to buy the Vehicle " + car.getModel() + " "
 					+ car.getProductionYear() + " for " + car.getPrice() + " from " + emp.getName() + " but need him $"
-					+ (car.getPrice() - cust.getCashOnHand()));
+					+ (car.getPrice() - cust.getBalance()));
 		}
 		} else {
 			System.out.println("Customer " + cust.getName() + " try to buy the Vehicle " + car.getModel() + " "
@@ -87,13 +86,9 @@ public class Dealership {
 		}
 	}
 	
-	public void deposit(double amount) {
-		dealershipsBalance += amount;
-	}
-	
 	public void info() {
 		System.out.println("---------------------");
-		System.out.println("Dealerships balance:  $" + dealershipsBalance);
+		System.out.println("Dealerships balance:  $" + getBalance());
 	}
 
 }

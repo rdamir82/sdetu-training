@@ -4,10 +4,15 @@ public class Person {
 
 	private String name;
 	private String addres;
+	private double balance;
 
-	public Person(String name, String addres) {
-		this.setName(name);
-		this.setAddres(addres);
+	
+
+	public Person(String name, String addres, double balance) {
+		super();
+		this.name = name;
+		this.addres = addres;
+		this.balance = balance;
 	}
 
 	public String getName() {
@@ -24,6 +29,18 @@ public class Person {
 
 	public void setAddres(String addres) {
 		this.addres = addres;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	
+	public void deposit(double amount) {
+		balance += amount;
+	}
+	
+	public void withdraw(double amount) {
+		balance -= amount;
 	}
 
 }

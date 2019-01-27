@@ -3,12 +3,10 @@ package car_dealership;
 public class Employee extends Person{
 		
 	private int sellCount;
-	private double balance = 0;
 	
 	public Employee(String name, String addres, int sellCount, double balance) {
-		super(name, addres);
+		super(name, addres, balance);
 		this.sellCount = sellCount;
-		this.balance = balance;
 	}
 
 
@@ -20,19 +18,11 @@ public class Employee extends Person{
 		System.out.println("Balance: $" + getBalance());
 
 	}
-
-
-	public double getBalance() {
-		return balance;
-	}
 	
 	public static void addOneToSellcount(Employee emp) {
 		emp.sellCount++;
 	}
 	
-	public void deposit(double amount) {
-		balance += amount;
-	}
 
 }
 

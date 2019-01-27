@@ -23,11 +23,11 @@ public void info() {
 		System.out.println("---------------------");
 		System.out.println("Model: " + getModel());
 		System.out.println("price: $" + getPrice());
-	/*	
+		
 		System.out.println("engine type: " + engineType);
 		System.out.println("color:  " + color);
 		System.out.println("Year: " + getProductionYear());
-	*/
+	
 		if (isInStock() == 0) {
 			System.out.println("OUT OF STOCK!!!");
 		} else {
