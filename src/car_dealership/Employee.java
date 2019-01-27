@@ -1,6 +1,6 @@
 package car_dealership;
 
-public class Employee extends Person{
+public class Employee extends Entity{
 		
 	private int sellCount;
 	

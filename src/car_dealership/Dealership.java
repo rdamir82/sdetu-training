@@ -1,6 +1,6 @@
 package car_dealership;
 
-public class Dealership extends Person {
+public class Dealership extends Entity {
 
 	public static void main(String[] args) {
 		

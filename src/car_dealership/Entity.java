@@ -1,6 +1,6 @@
 package car_dealership;
 
-public class Person {
+public class Entity {
 
 	private String name;
 	private String addres;
@@ -8,7 +8,7 @@ public class Person {
 
 	
 
-	public Person(String name, String addres, double balance) {
+	public Entity(String name, String addres, double balance) {
 		super();
 		this.name = name;
 		this.addres = addres;

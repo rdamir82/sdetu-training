@@ -1,6 +1,6 @@
 package car_dealership;
 
-public class Customer extends Person {
+public class Customer extends Entity {
 
 	
 	public Customer(String name, String addres, double balance) {
