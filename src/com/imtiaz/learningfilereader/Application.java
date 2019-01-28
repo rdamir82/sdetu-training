@@ -6,13 +6,13 @@ public class Application {
 
 	public static void main(String[] args) {
 		
-		File file = new File("C:\\1Users\\korisnik\\eclipse-workspace\\JavaTraining\\src\\filesProcessing\\myfile");
-		BufferedReader bufferedReader = null;
+		File file = new File("C:\\Users\\korisnik\\eclipse-workspace\\JavaTraining\\src\\filesProcessing\\myfile");
 		
-		try {
+		try (FileReader fileReader = new FileReader(file);
+			 BufferedReader bufferedReader = new BufferedReader(fileReader);	) {
 			
-			FileReader fileReader = new FileReader(file);
-			bufferedReader = new BufferedReader(fileReader);
+		//	fileReader = new FileReader(file);
+		//	bufferedReader = new BufferedReader(fileReader);
 			
 			
 			String line = bufferedReader.readLine();
@@ -30,17 +30,25 @@ public class Application {
 			
 			System.out.println("Problem reading the file " + file.getName());
 			
-		} finally {
+		} 
+	/*	
+		finally {
 		
 			try {
-				bufferedReader.close();
+				if(bufferedReader != null) {
+					bufferedReader.close();	
+				}
+				if(fileReader != null) {
+				fileReader.close();
+				}
 			} catch (IOException e) {
 				
 				System.out.println("unable to close fail " + file.getName());
 			
-		}	
+		    }	
 
 	}
+	*/
 
   }
 }
