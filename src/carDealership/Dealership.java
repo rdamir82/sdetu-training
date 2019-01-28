@@ -9,8 +9,6 @@ public class Dealership {
 		
 		Employee emp = new Employee();
 		
-		
-		
 		cust1.purchaseCar(vehicle, emp, false);
 				
 		
