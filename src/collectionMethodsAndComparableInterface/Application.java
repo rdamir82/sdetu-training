@@ -1,6 +1,7 @@
 package collectionMethodsAndComparableInterface;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class Application {
 
 	public static void main(String[] args) {
 
-		ArrayList<Integer> list1 = new ArrayList<Integer>();
+	/*	ArrayList<Integer> list1 = new ArrayList<Integer>();
 		list1.add(12);
 		list1.add(43);
 		list1.add(15);
@@ -22,7 +23,7 @@ public class Application {
 		newList.add(10);
 		newList.add(67);
 		newList.add(15);
-
+*/
 		// merge list addAll()
 
 		// list1.addAll(newList);
@@ -49,34 +50,35 @@ public class Application {
 
 		// Remove values except declared retainAll();
 
-		list1.retainAll(newList);
+		// list1.retainAll(newList);
 
-		for (Integer value : list1) {
+		// for (Integer value : list1) {
 
-			System.out.println(value);
-		}
+		//	System.out.println(value);
+		// }
 
-		HashSet<Integer> list2 = new HashSet<Integer>();
-		list2.add(12);
-		list2.add(43);
-		list2.add(15);
-		list2.add(67);
-		list2.add(43);
-		list2.add(10);
-		list2.add(10);
-		list2.add(10);
+		
+		HashSet<Employee> hashSet = new HashSet<Employee>();
+		hashSet.add(new Employee("Mike", 3500, "Accounting"));
+		hashSet.add(new Employee("Paul", 3000, "Admin"));
+		hashSet.add(new Employee("Peter", 4000, "IT"));
+		hashSet.add(new Employee("Angel", 2000, "Maint"));
 
-		List<Integer> li = new ArrayList<Integer>(list2);
+		
+		ArrayList<Employee> myList = new ArrayList<Employee>(hashSet);
+		
+		Collections.sort(myList);
+		
+		System.out.println(myList);
+		
+		
 
-		ArrayList<Integer> newList2 = new ArrayList<Integer>();
-		newList2.add(10);
-		newList2.add(67);
-		newList2.add(15);
+		// Converting lists:
+		
+		// List<Integer> li = new ArrayList<Integer>(list1);
 
-		for (Integer value : list2) {
+		// ArrayList<Integer> newList = new ArrayList<Integer>();
 
-			System.out.println(value);
-		}
 
 	}
 
