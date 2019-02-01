@@ -1,4 +1,4 @@
-package collectionMethodsAndComparableInterface;
+package collections04MethodsAndComparableInterface;
 
 import java.util.ArrayList;
 import java.util.Collections;

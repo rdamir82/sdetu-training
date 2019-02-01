@@ -1,4 +1,4 @@
-package traversingListCustomTypes;
+package collections02traversingListCustomTypes;
 
 public class Vehicle {
 	String make;

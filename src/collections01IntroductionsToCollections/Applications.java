@@ -1,4 +1,4 @@
-package collectionsAndGenerics;
+package collections01IntroductionsToCollections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

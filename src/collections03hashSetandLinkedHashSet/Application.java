@@ -1,4 +1,4 @@
-package hashSetandLinkedHashSet;
+package collections03hashSetandLinkedHashSet;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;

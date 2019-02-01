@@ -1,4 +1,4 @@
-package traversingListCustomTypes;
+package collections02traversingListCustomTypes;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

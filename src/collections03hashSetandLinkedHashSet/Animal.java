@@ -1,4 +1,4 @@
-package hashSetandLinkedHashSet;
+package collections03hashSetandLinkedHashSet;
 
 public class Animal {
 	String name;

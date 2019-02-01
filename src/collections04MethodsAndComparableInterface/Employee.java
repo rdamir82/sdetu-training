@@ -1,4 +1,4 @@
-package collectionMethodsAndComparableInterface;
+package collections04MethodsAndComparableInterface;
 
 public class Employee implements Comparable<Employee>{
 	String name;
