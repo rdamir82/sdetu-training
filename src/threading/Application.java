@@ -10,6 +10,7 @@ public class Application {
 		System.out.println("Starting thread 2..");	
 		Task taskRunner2 = new Task("Thread-B");
 		taskRunner2.start();
+		
 	}
 }
 
