@@ -11,4 +11,4 @@ public class Sequence {
 }
 
 
-// or use synchronized block  synchronized(this){ cod goes here.. }
+// or use synchronized block  synchronized(this){ code goes here.. }
